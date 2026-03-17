@@ -39,20 +39,25 @@ def simple_calculator(operation: str, num1: float, num2: float) -> float:
 
 #function asks for a type of input and cleans the input to only enter valid data types
 def cleanInput(type, message):
-    #takes input and
+    
     looking = True
+    #main loop that only ends when a valid value is entered
     while looking:
+        #try to make sure good inputs are got
         try:
             if type == "float":
                 output = float(input(message))
                 looking = False
+            #handles operation
             elif type == "operation":
                 output = input(message).strip().lower()
                 print(output)
+                #checks if it is a valid operator
                 if output in ["add","subtract","multiply","divide"]:
                     looking = False
                 else:
                     print("enter a vaid operator")
+        #execpt if a error is thrown
         except:
             print("please enter a valid value!")
     return output
