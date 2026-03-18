@@ -20,7 +20,7 @@ def test_zero():
 
 def test_negative():
     assert two_sum([-5,-2,7,17], 5) == [1,2]
-    assert two_sum([-5,-2,-6,-8,7,-9], -11) == [1,5]
+    assert two_sum([-5,-2,-7,-8,7,-9], -11) == [1,5]
     assert two_sum([-5,2,-3,0], -5) == [0,3]
 
 if __name__ == "__main__":
